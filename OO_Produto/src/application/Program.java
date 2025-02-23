@@ -11,16 +11,15 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Product product = new Product();
-		
 		System.out.println("Enter product Data: ");
-		
+
 		System.out.print("Name: ");
-		product.name = sc.nextLine();
+		String name = sc.nextLine();
 		System.out.print("Price: ");
-		product.price = sc.nextDouble();
+		double price = sc.nextDouble();
 		System.out.print("Quantity: ");
-		product.quant = sc.nextInt();
+		int quant = sc.nextInt();
+		Product product = new Product(name,price,quant);
 		
 		System.out.println();
 		System.out.println("Product data: " + product);
